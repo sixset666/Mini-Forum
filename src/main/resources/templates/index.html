@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Main page</title>
+</head>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: black;
+    }
+
+    .btn:hover {
+        border: 1px solid rgba(0, 0, 0, 0.476);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.52);
+    }
+
+    .btn {
+        cursor: pointer;
+        padding: 6px 12px;
+        font-size: 18px;
+        transition: 0.2s;
+
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .container-header {
+        display: flex;
+        justify-content: space-between;
+        max-width: 80%;
+        margin: 0 auto;
+        align-items: center;
+    }
+
+    .header {
+        border-bottom: 3px solid rgb(255, 255, 255);
+        background-color: black;
+    }
+
+    .container {
+        max-width: 80%;
+        margin: 0 auto;
+        border: 3px solid #fff;
+        padding: 30px;
+        margin-top: 60px;
+    }
+
+    .header-list {
+        display: flex;
+    }
+
+    .header-list-item:not(:last-child) {
+        margin-right: 20px;
+    }
+
+    .header-link {
+        color: #fff;
+        font-size: 22px;
+    }
+
+    .profile-btn {
+        color: #fff;
+        font-size: 20px;
+        border: 1px solid #fff;
+        padding: 6px 10px;
+        border-radius: 4px;
+        transition: 0.4s;
+        background-color: #000;
+    }
+
+    .profile-btn:hover {
+        background-color: #fff;
+        color: black;
+    }
+
+    .header-logo {
+        max-width: 200px;
+    }
+
+    .main {
+        background-color: black;
+    }
+
+    .title {
+        color: #fff;
+    }
+
+    .descr {
+        color: #fff;
+        font-size: 20px;
+    }
+</style>
+
+<body>
+<header class="header">
+    <div class="container-header">
+
+        <svg width="200" id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg"
+             viewBox="0 0 1723.18 1243.3">
+            <defs>
+                <style>
+                    .cls-1 {
+                        fill: #fff;
+                    }
+                </style>
+            </defs>
+            <rect x="-8.72" width="1740.61" height="1243.3" />
+            <path class="cls-1"
+                  d="M491.8,594.8a45.91,45.91,0,0,0-19.16,4,39.09,39.09,0,0,0-12.56,9,32.57,32.57,0,0,0-11.27-9,40.53,40.53,0,0,0-18-4A43.07,43.07,0,0,0,414.21,598a35.49,35.49,0,0,0-8.75,5.15v-7H376.15v93.24h30.46V642.58c0-7,1.56-12.32,4.64-15.73s7.09-5,12.34-5c6.16,0,14.35,1.92,14.35,18.47v49.08h30.47V642.58c0-7,1.56-12.32,4.64-15.73s7.14-5,12.5-5c4.67,0,8.12,1.42,10.56,4.32s3.79,7.75,3.79,14.15v49.08h30.47v-53c0-13.64-3.53-24.08-10.49-31S503.47,594.8,491.8,594.8Z" />
+            <rect class="cls-1" x="548.55" y="596.12" width="30.46" height="93.24" />
+            <path class="cls-1"
+                  d="M654.18,594.8a46.74,46.74,0,0,0-17.5,3.22,37.93,37.93,0,0,0-9.35,5.35v-7.25H598v93.24h30.46V643.23c0-7.2,1.71-12.64,5.08-16.16s7.88-5.26,13.72-5.26c5.13,0,8.89,1.43,11.51,4.37s4,7.73,4,14.1v49.08h30.46v-53c0-13.54-3.65-24-10.84-31S665.74,594.8,654.18,594.8Z" />
+            <rect class="cls-1" x="711.59" y="596.12" width="30.46" height="93.24" />
+            <path class="cls-1"
+                  d="M796.42,628h-26a12.7,12.7,0,0,0-12.68,12.69v12.68h38.65a12.69,12.69,0,1,0,0-25.37Z" />
+            <path class="cls-1"
+                  d="M857.42,596.72c0-7.2,2.86-10.41,9.26-10.41a15,15,0,0,1,9,2.69l2.58,1.81,8.46-23.31-1.58-1a28.84,28.84,0,0,0-9.41-3.87,49.14,49.14,0,0,0-11.48-1.3c-11.46,0-20.52,3.22-26.93,9.57s-9.67,15-9.67,25.71v1.53H814v24.55h13.64v66.72h30.46V622.64h22V598.09H857.42Z" />
+            <path class="cls-1"
+                  d="M957.55,600.92a58.93,58.93,0,0,0-52.3,0A45.89,45.89,0,0,0,887,618a49.77,49.77,0,0,0,0,49.5,46,46,0,0,0,18.28,17.08,55.71,55.71,0,0,0,26.19,6.11,55.1,55.1,0,0,0,26.11-6.12,46,46,0,0,0,18.19-17.07,49.77,49.77,0,0,0,0-49.5A46,46,0,0,0,957.55,600.92Zm-6,41.82c0,6.87-1.85,12.16-5.66,16.17s-8.5,5.91-14.44,5.91a19.13,19.13,0,0,1-14.53-5.92c-3.87-4-5.74-9.29-5.74-16.16s1.87-12.15,5.74-16.16a19.13,19.13,0,0,1,14.53-5.92,18.9,18.9,0,0,1,14.44,5.91C949.69,630.58,951.54,635.87,951.54,642.74Z" />
+            <polygon class="cls-1" points="994.6 596.12 994.6 689.36 1023.92 689.36 1023.91 596.12 994.6 596.12" />
+            <path class="cls-1"
+                  d="M1143.34,642.25c0,7.22-1.66,12.67-4.94,16.19s-7.54,5.23-13,5.23c-10.57,0-15.5-6-15.5-19V596.12h-30.46v52.37c0,13.76,3.67,24.35,10.91,31.47s17.08,10.72,29.3,10.72a40.81,40.81,0,0,0,16.24-3.24,36.94,36.94,0,0,0,8.8-5.34v7.26h29.14V596.12h-30.46Z" />
+            <path class="cls-1"
+                  d="M1336.55,605.29c-7-7-16.41-10.49-28.09-10.49a46,46,0,0,0-19.16,4,39.3,39.3,0,0,0-12.56,9,32.44,32.44,0,0,0-11.26-9,40.56,40.56,0,0,0-18-4,43.16,43.16,0,0,0-16.62,3.15,35.68,35.68,0,0,0-8.75,5.15v-7h-29.31v93.24h30.47V642.58c0-7,1.56-12.32,4.64-15.73s7.09-5,12.34-5c6.16,0,14.35,1.92,14.35,18.47v49.08h30.46V642.58c0-7,1.56-12.32,4.64-15.73s7.15-5,12.51-5c4.66,0,8.12,1.42,10.56,4.32s3.79,7.75,3.79,14.15v49.08H1347v-53C1347,622.69,1343.5,612.25,1336.55,605.29Z" />
+            <path class="cls-1" d="M1048,590a17.94,17.94,0,0,0-17.94,17.95v17.94H1048a17.95,17.95,0,1,0,0-35.89Z" />
+            <path class="cls-1"
+                  d="M729.57,552.62a18,18,0,0,0-18,18v17.95h18a18,18,0,0,0,17.95-17.95h0A18,18,0,0,0,729.57,552.62Z" />
+            <path class="cls-1"
+                  d="M565.79,552.62a18,18,0,0,0-17.95,18v17.95h17.95a18,18,0,0,0,18-17.95h0A18,18,0,0,0,565.79,552.62Z" />
+        </svg>
+        <nav class="header-nav">
+            <ul class="header-list">
+                <li class="header-list-item">
+                    <a th:href="@{/profile}" class="header-link">
+                        Home
+                    </a>
+                </li>
+                <li class="header-list-item">
+                    <a th:href="@{/questions}" class="header-link">
+                        Questions
+                    </a>
+                </li>
+                <li class="header-list-item">
+                    <a th:href="@{/questions/add}" class="header-link">
+                        New question
+                    </a>
+                </li>
+                <li class="header-list-item">
+                    <a th:href="@{login}" class="header-link">
+                        Login
+                    </a>
+                </li>
+                <li th:href="@{registration}" class="header-list-item">
+                    <a href="" class="header-link">
+                        Registration
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <a href="" class="profile-btn">Мой профиль</a>
+    </div>
+</header>
+    <main class="main">
+        <div class="container">
+            <div sec:authorize="hasRole('ADMIN')">
+                <h2 class="title">This block is visible only to the administrator</h2>
+            </div>
+            <div sec:authorize="hasRole('USER')">
+                <h2 class="title">This block is visible only to a regular user</h2>
+            </div>
+            <div>
+                <form method="post" th:action="@{/logout}">
+                    <input class="profile-btn" type="submit" value="Sign Out">
+                </form>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>
